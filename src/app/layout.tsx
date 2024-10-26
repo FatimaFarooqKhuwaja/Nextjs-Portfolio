@@ -26,9 +26,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-pink-100 ${geistSans.variable} ${geistMono.variable} antialiased`} 
       >
-        {children}
+        <div>
+        <ul className="h-[40px] items-center w-auto bg-pink-300 text-bold text-xl  text-pink-700 md:text-3xl flex justify-around ">
+          <li><a href="http://localhost:3000/" className="hover:text-2xl md:hover:text-4xl">Home</a></li>
+          <li><a href="./Skills" className="hover:text-2xl md:hover:text-4xl">Skills</a></li>
+          <li><a href="./Contact" className="hover:text-2xl md:hover:text-4xl">Contact</a></li>
+        </ul>
+      </div>
+      {children}
+       {/*fotter start here*/}
+       <footer className="h-[40px] w-auto bg-pink-300">
+        <p className="text-pink-700 font-bold text-4xl text-center">
+          Thank You
+        </p>
+      </footer>
+
+      {/*fotter end here*/}
+    
       </body>
     </html>
   );
